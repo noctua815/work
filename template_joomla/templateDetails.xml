@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.4" type="template" client="site">
+	<name>solodka</name>
+	<version>1.0</version>
+	<creationDate>11/01/2016</creationDate>
+	<author>Vika Sova</author>
+	<authorEmail>denisova-vr@yandex.ru</authorEmail>
+	<copyright>Copyright (C) 2016 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>TPL_SOLODKA_SITE_XML_DESCRIPTION</description>
+	
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+	</files>
+	
+	<positions>
+		<position>top-head</position>
+		<position>header-nav</position>
+		<position>slider</position>
+		<position>site-desc</position>
+		<position>aside-menu</position>
+		<position>content</position>
+		<position>footer-info</position>
+		<position>footer-bottom</position>
+	</positions>
+
+</extension>

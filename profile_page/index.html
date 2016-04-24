@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FireUp! - специализированная соцсеть для студентов</title>
+		<meta name="author" content="Viktoriya Denisova" />
+		<meta name="description" content="Специализированная социальная сеть для молодых специалистов, работодателей и ВУЗов"/>
+		<meta name="keywords" content="работа, студент, выпускник, практика" />
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style-profile.css">
+		<script src="js/jquery-1.6.3.min.js"></script>
+		<script src="js/scripts-profile.js"></script>
+	</head>
+	<body>
+		</div>
+	<div class="layout">
+		<aside class="nav_bar"> <!--SIDEBAR-->
+			<a href="#" class="logo"><img src="img/logo.png" height="46" width="113" alt=""></a>
+			<section class="user-panel">
+				<div class="user-panel_head">
+					<div class="user-panel_avatar"><img src="img/profile.png" height="49" width="49" alt=""></div>
+					<div class="user-panel_name">Денисова Виктория</div>
+					<div class="user-panel_email">noctua815@mail.ru</div>
+					<button class="btn_drop"></button>
+				</div>
+				<div class="user-panel_menu">
+					<ul class="menu">
+						<li class="menu_item">
+							<a href="#" class="menu_link"><span></span>Настройки</a>
+						</li>
+						<li class="menu_item">
+							<a href="#" class="menu_link"><span class="icon-exit"></span>Выход</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<ul class="menu">
+				<li class="menu_item link_active">
+					<a href="#" class="menu_link"><span class="icon-profile"></span>Профиль</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link"><span class="icon-jobs"></span>Вакансии</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link"><span class="icon-empls"></span>Работодатели</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link"><span class="icon-unvrs"></span>ВУЗы</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link"><span class="icon-stat"></span>Статистика</a>
+				</li>
+			</ul>
+		</aside>
+		<div class="layout-body"> 
+			<header class="layout-topbar"><!--SEARCH-->
+				<form class="header_search">
+					<input class="search-input" type="search" placeholder="Найти..." name="search">
+					<div class="ext-search">
+						<h1>Расширенный поиск</h1>
+						<select  class="select_box" id="s-Region" name="s-Region" size="1">
+						<option selected="selected">Регион</option>
+						<option value="Pyatigorsk">Пятигорск</option>
+						<option value="Kislovodsk">Кисловодск</option>
+						<option value="Inozemtsevo">Иноземцево</option>
+						</select>
+						<select  class="select_box" id="s-Salary" name="s-Salary" size="1">
+						<option selected="selected">Зарплата</option>
+						<option>фиксированная</option>
+						<option title="от 10 тыс.">от 10 тыс.</option>
+						<option>от 20 тыс.</option>
+						<option>от 30 тыс.</option>
+						</select>
+						<select  class="select_box" id="s-Experience" name="s-Experience" size="1">
+						<option selected="selected">Опыт работы</option>
+						<option>без опыта</option>
+						<option>до 1 года</option>
+						<option>до 3 лет</option>
+						<option>до 5 лет</option>
+						</select>
+						<select  class="select_box" id="s-Graph" name="s-Graph" size="1">
+						<option selected="selected">График работы</option>
+						<option>Полный день</option>
+						<option>Гибкий график</option>
+						<option>Удаленная работы</option>
+						</select>
+						<select  class="select_box" id="s-Type" name="s-Type" size="1">
+						<option selected="selected">Тип занятости</option>
+						<option>Полная занятость</option>
+						<option>Частичная занятость</option>
+						<option>Стажировка</option>
+						</select>
+						<input id="searchBtn" type="submit" value="Поиск">
+						<span class="close-search"></span>
+				</div>
+				</form>
+				<div class="btn_block">
+					<a href="#" class="search_btn">Расширенный поиск</a>
+				</div>
+			</header>
+			<section class="column_main">
+				<div class="message-section message-info"><!--MESSAGE-->
+					<span class="close-message"></span>
+					<h2 class="message-title">Добро пожаловать на ресурс FireUp!</h2>
+					<p class="message">Вы успешно прошли регистрацию.<br>
+						Для дальнейшей работы, Вам необходимо заполнить Ваш профиль.</p>
+				</div>
+				<!--<div class="message-section message-error">
+					<span class="close-message"></span>
+					<h2 class="message-title">Внимание!</h2>
+					<p class="message">Вы неправильно заполнили форму.<br>
+						Для дальнейшей работы, Вам необходимо заполнить Ваш профиль.</p>
+				</div>-->
+				<main class="page">
+					<h1>Ваш профиль</h1>
+					<div class="profile_tabs"> <!--TABS LIST-->
+						<ul class="tabs">
+							<li id="generalTab" class="tab_item tab_select">Основная информация</li>
+							<li id="eduTab" class="tab_item">Образование</li>
+							<li id="jobTab" class="tab_item">Опыт работы</li>
+						</ul>
+					</div>
+					<div class="questionary_block">
+						<form action="post" class="info_form form_select" id="form_generalTab"> <!--GENERAL INFO-->
+							<div>
+								<label for="avatar">Аватар</label>
+								<div class="avatar"></div>
+								<div class="focus simple_btn">
+									<span>Выбрать файл</span>
+									<input type="file" name="avatar">
+								</div>
+							</div>
+							<div>
+								<label for="lastName">Фамилия</label>
+								<input class="simple_input" type="text" name="lastName" placeholder="Введите Вашу фамилию">
+							</div>
+							<div>
+								<label for="firstName">Имя</label>
+								<input class="simple_input" type="text" name="firstName" placeholder="Введите Ваше имя">
+							</div>
+							<div>
+								<label for="middleName">Отчество</label>
+								<input class="simple_input" type="text" name="middleName" placeholder="Введите Ваше отчество">
+							</div>
+							<div>
+								<label for="birthday">Дата рождения</label>
+								<input class="simple_input" type="date" name="birthday">
+							</div>
+							<div>
+								<label class="label-for-radio">Пол</label>
+								<div class="radio-block">
+									<input name="sex" type="radio" value="male">Мужской</div>
+								<div class="radio-block">
+									<input name="sex" type="radio" value="female">Женский</div>
+
+							</div>
+							<div>
+								<label for="cityResidence">Город проживания</label>
+								<input class="simple_input popup-action" type="text" name="cityResidence" placeholder="Выберите Ваш город проживания" readonly>
+							</div>
+							<div class="array" id="hobbies">	
+								<label for="hobbie">Увлечения и занятия</label>
+								<input class="simple_input hobbie" type="text" name="hobbie" placeholder="Введите Ваше хобби">
+								<div class="add-input add-hobbie" title="Добавить"></div>
+							</div>
+							<div class="array" id="languages">	
+								<label for="language">Владение языками</label>
+								<input class="simple_input language" type="text" name="language" placeholder="Например, английский">
+								<div class="add-input add-language" title="Добавить"></div>
+							</div>
+							<div class="array" id="contacts">	
+								<label for="contact">Контакты</label>
+								<input class="simple_input contact" type="text" name="contact" placeholder="Введите контакт">
+								<div class="add-input add-contact" title="Добавить"></div>
+							</div>
+							<div class="aboutArea">
+								<label for="about">О себе</label>
+								<textarea class="simple_input" name="about" cols="45" rows="10" plsceholder="Расскажите о себе"></textarea>
+							</div>
+							<div>
+								<input id="saveGeneral" class="simple_btn" type="submit" value="Сохранить">
+							</div>
+						</form>
+						<form action="post" class="info_form" id="form_eduTab"> <!--EDUCATION INFO-->
+							<div>
+								<label for="lastName">Поле 1</label>
+								<input class="simple_input" type="text" name="lastName" placeholder="Введите ...">
+							</div>
+							<div>
+								<label for="firstName">Поле 2</label>
+								<input class="simple_input" type="text" name="firstName" placeholder="Введите ...">
+							</div>
+							<div>
+								<label for="middleName">Поле 3</label>
+								<input class="simple_input" type="text" name="middleName" placeholder="Введите ...">
+							</div>
+							<div>
+								<input id="saveEdu" class="simple_btn" type="submit" value="Сохранить">
+							</div>
+						</form>
+						<form action="post" class="info_form" id="form_jobTab"> <!--JOB INFO-->
+							<div>
+								<label for="lastName">Поле 4</label>
+								<input class="simple_input" type="text" name="lastName" placeholder="Введите ...">
+							</div>
+							<div>
+								<label for="firstName">Поле 5</label>
+								<input class="simple_input" type="text" name="firstName" placeholder="Введите ...">
+							</div>
+							<div>
+								<label for="middleName">Поле 6</label>
+								<input class="simple_input" type="text" name="middleName" placeholder="Введите ...">
+							</div>
+							<div>
+								<input id="saveJob" class="simple_btn" type="submit" value="Сохранить">
+							</div>
+						</form>
+					</div>
+				</main>
+				<footer class="layout_footer"> <!--FOOTER-->
+					<nav class="other_link">
+						<ul>
+							<li><a href="/">О сайте</a></li>
+							<li><a href="/">Обратная связь</a></li>
+							<li><a href="/">Защита персональных данных</a></li>
+							<li><a href="/">Реклама</a></li>
+						</ul>
+					</nav>
+				</footer>
+			</section>
+			<section class="column_banners">
+				<div class="banner">
+				</div>
+			</section>	
+		</div>
+	</div>
+	</body>
+</html>
