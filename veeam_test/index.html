@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Test task for HTML</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!--OVERLAY LAYOUT-->
+	<div class="overlaybg"> </div>
+	<div class="wrapper">
+		<!--HEADER-->
+		<header>
+			<div class="layout-positioner">
+				<a class="logo" href="/" title="Veeam - Modern Data Protection"></a>
+				<div class="info-block"></div>
+			</div>
+		</header>
+		<!--BREADCRUMBS-->
+		<nav class="breadcrumbs-block">
+			<div class="layout-positioner">
+				<ul class="breadcrumbs">
+					<li><a href="#">White Papers</a></li>
+					<li class="current">Annual Data Protection Report 2013</li>
+				</ul>
+			</div>
+		</nav>
+		<!--CONTENT-->
+		<main>
+			<div class="layout-positioner">
+				<div class="tabs"><!--TABS-->
+					<ul class="tabNavigation"><!--TAB NAVIGATION-->
+						<li><a href="#tab_2">Enterprise Edition</a></li>
+						<li><a href="#tab_1">SMB Edition</a></li>
+					</ul><!--END NAVIGATION-->
+					<div id="tab_1" class="tab"><!--TAB 1-->
+						<div class="report"><!--REPORT BLOCK-->
+							<p class="report-header">Annual Data Protection Report 2013: <span class="yellow">Enterprise and SMB Editions</span></p>
+							<p class="report-text">Survey of 500 enterprises and 500 small / medium businesses across USA, UK, Germany and France</p>
+						</div>
+						<div class="content-row"><!--CONTENT BLOCK-->
+							<article class="text-block"><!--TEXT BLOCK-->
+								<h2>SMB Edition</h2>
+								<h2>85% of SMBs Experiencing Problems with Backup and Recovery</h2>
+								<h3>Report shows 55% will change backup tool by 2014</h3>
+								<p>Veeam reveals the findings of the recent SMB data protection survey:</p>
+								<!--POPUP IMG-->
+								<div class="videoImg"><a href="javascript:;"  rel="https://www.youtube.com/embed/klModGpSKtc" class="youTubeVideo" ><img src="imgs/annual-smb-report.jpg" alt="Annual SMB report"></a></div>
+								<ul class="margin">
+									<li>85% of SMBs are experiencing cost-related challenges with backup and recovery, 83% with capability and 80% with complexity</li>
+									<li>67% of the virtual environment is backed-up meaning that almost a third of SMBs’ virtual infrastructure is unprotected</li>
+									<li>More than 1 in 6 (17%) recoveries of backed-up machines cause problems</li>
+									<li>41% of SMBs stated that downtime in the event of an IT failure costs $150,000 or more per hour</li>
+								</ul>
+								<h3>Infographics - SMB challenges with data protection in brief</h3>
+								<img class="infg" src="imgs/smb_ingographics_web_preview_1_cut.png" alt="SMB ingographics 1">
+								<img class="infg" src="imgs/smb_ingographics_web_preview_2_cut.png" alt="SMB ingographics 2">
+							</article><!--END TEXT BLOCK-->
+							<aside class="registration-form"><!--FORM-->
+								<p class="header">Register here</p>
+								<form id="registration-1" action="#">
+									<label class="req" for="fname">First name</label><p><input id="fname" required></p>
+									<label class="req" for="lname">Last name</label><p><input id="lname" required></p>
+									<label class="req" for="email">Business email</label><p><input id="email" required></p>
+									<label class="req" for="company">Company</label><p><input id="company" required></p>
+									<label class="req" for="jobTitle">Job title</label><p><select id="jobTitle">
+										<option selected="selected">Select job discription</option>
+									</select></p>
+									<label class="req" for="country">Country</label><p><select id="country">
+										<option selected="selected">Select country</option>
+										<option value="Russia">Russia</option>
+										<option value="USA">Unites States</option>
+										<option value="Canada">Canada</option>
+										<option value="Brazil">Brazil</option>
+										<option value="UK">UK</option>
+									</select></p>
+									<label for="state">State</label><p><select id="state">
+										<option selected="selected">Select state</option>
+									</select></p>
+									<p class="submit"><input type="submit" value="Register"></p>
+								</form>
+							</aside><!--END FORM-->
+						</div><!--END CONTENT BLOCK-->
+					</div><!--END TAB 1-->
+					<!--TAB 2-->
+					<div id="tab_2" class="tab">
+						<div class="report"><!--REPORT BLOCK-->
+							<p class="report-header">Annual Data Protection Report 2013: <span class="yellow">Enterprise and SMB Editions</span></p>
+							<p class="report-text">Survey of 500 enterprises and 500 small / medium businesses across USA, UK, Germany and France</p>
+						</div>
+						<div class="content-row"><!--CONTENT BLOCK-->
+							<article class="text-block"><!--TEXT BLOCK-->
+								<h2>Enterprise Edition</h2>
+								<h2>CIO study Shows Capability, Complexity and Cost Issues Hampering IT Departments</h2>
+								<!--POPUP IMG-->
+								<div class="videoImg"><a href="javascript:;"  rel="https://www.youtube.com/embed/klModGpSKtc" class="youTubeVideo" ><img src="imgs/preview-annual-dp-report.png" alt="Annual SMB report"></a></div>
+								<p class="margin">Key findings:</p>
+								<ul class="margin">
+									<li>68% of CIOs feel that their backup and recovery tools will become less effective as the amount of data and servers in their organization grows</li>
+									<li>88% of CIOs experience capability-related challenges with backup and recovery, 87% with cost and 84% with complexity: showing that data protection is still not a simple task</li>
+									<li>58% of CIOs are planning to change their backup tool for virtual environments by 2014</li>
+								</ul>
+								<p>Download the <strong>full report</strong> to learn more and get the <strong>previous editions</strong> (2011 and 2010)</p>
+							</article><!--END TEXT BLOCK-->
+							<aside class="registration-form"><!--FORM-->
+								<p class="header">Register here</p>
+								<form id="registration-2" action="#">
+									<label class="req" for="fname2">First name</label><p><input id="fname2" required></p>
+									<label class="req" for="lname2">Last name</label><p><input id="lname2" required></p>
+									<label class="req" for="email2">Business email</label><p><input id="email2" required></p>
+									<label class="req" for="company2">Company</label><p><input id="company2" required></p>
+									<label class="req" for="jobTitle2">Job title</label><p><select id="jobTitle2">
+										<option selected="selected">Select job discription</option>
+									</select></p>
+									<label class="req" for="country2">Country</label><p><select id="country2">
+										<option selected="selected">Select country</option>
+										<option value="Russia">Russia</option>
+										<option value="USA">Unites States</option>
+										<option value="Canada">Canada</option>
+										<option value="Brazil">Brazil</option>
+										<option value="UK">UK</option>
+									</select></p>
+									<label for="state2">State</label><p><select id="state2">
+										<option selected="selected">Select state</option>
+									</select></p>
+									<p class="submit"><input type="submit" value="Register"></p>
+								</form>
+							</aside><!--END FORM-->
+						</div><!--END CONTENT BLOCK-->
+					</div><!--END TAB 2-->
+				</div><!--END TABS-->
+			</div>
+		</main>
+		<!--FOOTER-->
+		<footer>
+			<div class="layout-positioner">
+					<ul class="footer-menu">
+						<li><a href="#">White Papers</a></li>
+						<li><a href="#">Virtualisation Webinars</a></li>
+						<li><a href="#">Product Demos</a></li>
+						<li><a href="#">Contact Sales</a></li>
+					</ul>
+				<small>Copyright © 2013 Veeam® Software. Privacy policy</small>
+			</div>
+		</footer>
+		
+		<!--POPUP-->
+		<div class="popup"><a class="close" href="javascript:;" >X</a>
+		  	<div class="video-container">
+			    <div class="iframe">
+			    	<iframe width="420" height="315" src="" allowfullscreen></iframe>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js" defer></script>
+	<script src="js/script.js" defer></script>
+</body>
+</html>
