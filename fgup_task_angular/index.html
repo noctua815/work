@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="listApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Test task</title>
+	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<style>
+		.button-group { text-align: center; }
+	</style>
+</head>
+<body ng-controller="listCtrl">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1>Список контактов</h1>
+				<p>Всего пользователей: {{ clients.length }}</p>
+				<p class="bg-info" ng-show="message != ''">{{ message }} <i class="fa fa-times" aria-hidden="true" ng-click="message = ''"></i></p>
+						<form class="form-horizontal clearfix">
+							<div class="form-group col-md-8">
+								<div class="input-group">
+									<div class="input-group-addon"><i class="fa fa-search"></i></div>
+									<input type="text" class="form-control" placeholder="Поиск по имени" ng-model="searchName">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<button type="button" class='btn btn-primary' ng-click="showPanel = !showPanel"><i class="fa fa-plus" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i></button>
+							</div>
+							<div class="form-group col-md-12" ng-show="showPanel === true">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">ФИО</label>
+	    							<div class="col-sm-10">
+	      								<input type="text" class="form-control" placeholder="Введите ФИО"  ng-model="name">
+	    							</div>
+    							</div>
+    							<div class="form-group">
+									<label class="col-sm-2 control-label">Страна</label>
+	    							<div class="col-sm-10">
+	      								<!-- <input type="text" class="form-control" placeholder="Введите страну"  ng-model="country"> -->
+	      								<select class="form-control" ng-model="country">
+	      									<option value="{{country}}" ng-repeat="country in countries">{{country}}</option>
+	      								</select>
+	    							</div>
+    							</div>
+    							<div class="form-group">
+									<label class="col-sm-2 control-label">Телефон</label>
+	    							<div class="col-sm-10">
+	      								<input type="text" class="form-control" placeholder="Введите телефон"  ng-model="phone" ui-mask="+9-(999)-999-99-99"  ui-mask-placeholder ui-mask-placeholder-char="_" />
+	    							</div>
+    							</div>
+    							<div class="form-group">
+    								<div class="col-sm-offset-2 col-sm-10">
+		    							<button type="button" class='btn btn-primary' ng-click="addClient(); showPanel = false" ng-hide="currentClient > -1">Добавить</button>
+										<button type="button" class='btn btn-success' ng-click="saveChanges(); showPanel = false" ng-show="currentClient > -1">Сохранить</button>
+									</div>
+								</div>
+  							</div>
+						</form>
+			
+			<div class="tableRow" ng-style="{'height': heightTable}">
+				<table class="table-condensed table-striped">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th><a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+							ФИО
+							<span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+							</a></th>
+							<th>Страна</th>
+							<th>Телефон</th>
+							<th>Действия</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="client in clients | filter:searchName | orderBy:sortType:sortReverse">
+							<td>{{ client.id + 1}}</td>
+							<td>{{ client.name }}</td>
+							<td>{{ client.country }}</td>
+							<td><small>{{ client.phone }}</small></td>
+							<td>
+								<div class="button-group" role="group">
+									<button type="button" class="btn btn-default btn-xs" ng-click="editClient(client.id)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+									<button type="button" class="btn btn-danger btn-xs " ng-click="deleteClient(client.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<script src="js/vendor/angular.min.js"></script>
+	<script src="js/vendor/mask.min.js"></script>
+	<script src="js/app.js"></script>
+	
+</body>
+</html>
