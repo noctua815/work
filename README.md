@@ -68,6 +68,7 @@
     **style.css** 
 * **img**
 * **js**
+* **js**   
     **jquery.min.js**  
     **script.js**  
 * **index.php**
